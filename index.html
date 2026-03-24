@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestionnaire de Taches Intelligent</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Votre CSS personnalise -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ==================================================
+       BARRE DE NAVIGATION
+       - Afficher le titre de l'application
+       - Afficher le compteur de taches restantes
+       ================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          <i class="bi bi-check2-square me-2"></i>Gestionnaire de Taches
+        </a>
+        <!-- TODO: Ajouter un badge avec id="compteur-taches" pour afficher le nombre de taches en cours -->   
+      </div>
+    </nav>
+
+    <!-- ==================== CONTENU PRINCIPAL ==================== -->
+    <div class="container my-4">
+      <!-- ==================================================
+         FORMULAIRE D'AJOUT DE TACHE
+         Construire un formulaire dans une carte Bootstrap avec :
+         - Champ texte pour le titre (obligatoire, id="titre-tache")
+         - Champ texte pour la description (facultatif, id="desc-tache")
+         - Menu déroulant pour la priorité (id="priorite-tache")
+           Options : Basse, Moyenne (par défaut), Haute
+         - Bouton de soumission pour ajouter la tache
+
+         Utiliser la grille Bootstrap (row, col-md-*) pour
+         organiser les champs sur une seule ligne en bureau.
+         ================================================== -->
+      <div class="card shadow-sm mb-4">
+        <div class="card-body p-4">
+          <h5 class="card-title mb-3">
+            <i class="bi bi-plus-circle me-2 text-primary"></i>Ajouter une
+            nouvelle tache
+          </h5>
+
+          <form id="formulaire-tache">
+            <div class="row g-3">
+              <!-- TODO: Champ Titre de la tache (col-md-4) -->
+              <!-- Utiliser class="form-control", id="titre-tache" -->
+              <!-- Ajouter un <div class="invalid-feedback"> pour le message d'erreur -->
+
+              <!-- TODO: Champ Description (col-md-4) -->
+              <!-- Utiliser class="form-control", id="desc-tache" -->
+
+              <!-- TODO: Menu déroulant Priorité (col-md-2) -->
+              <!-- Utiliser class="form-select", id="priorite-tache" -->
+              <!-- Options : Basse (value="basse"), Moyenne (value="moyenne"), Haute (value="haute") -->
+
+              <!-- TODO: Bouton Ajouter (col-md-2) -->
+              <!-- Utiliser class="btn btn-primary w-100" -->
+              <!-- Texte du bouton : "Ajouter" -->
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- ==================================================
+         BOUTONS DE FILTRE
+         Créer 3 boutons pour filtrer la liste :
+         - Toutes      (data-filtre="toutes")
+         - En cours    (data-filtre="en-cours")
+         - Terminées   (data-filtre="terminees")
+
+         Utiliser class="filtre-btn" sur chaque bouton.
+         Le bouton actif par défaut doit aussi avoir
+         la classe "filtre-actif".
+         ================================================== -->
+      <div class="d-flex justify-content-center gap-2 mb-4">
+        <!-- TODO: Ajouter les trois boutons de filtre ici -->
+        <!-- Exemple : <button class="btn btn-outline-primary filtre-btn filtre-actif" data-filtre="toutes">Toutes</button> -->
+      </div>
+
+      <!-- ==================================================
+         CONTENEUR DE LA LISTE DES TACHES
+         C'est ici que JavaScript affichera les cartes.
+         ================================================== -->
+      <div id="liste-taches" class="row g-3">
+        <!-- Les taches seront affichées ici par JavaScript -->
+      </div>
+    </div>
+
+    <!-- ==================== PIED DE PAGE ==================== -->
+    <footer class="text-center py-3 mt-5 bg-light border-top">
+      <p class="text-muted mb-0">
+        &copy; 2026 [Votre Nom] &mdash; Cours de Développement Web
+      </p>
+    </footer>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>
